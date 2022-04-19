@@ -1,0 +1,28 @@
+{
+    "name": "tailwindcss-nimiq-theme",
+    "version": "0.0.1",
+    "description": "Nimiq theme configuration for TailwindCSS",
+    "main": "src/index.js",
+    "categories": [
+        "Tailwind CSS",
+        "Tailwind CSS Theme",
+        "Nimiq"
+    ],
+    "repository": "https://github.com/onmax/tailwindcss-nimiq",
+    "author": "onmax",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "scripts": {
+        "release": "release-it"
+    },
+    "peerDependencies": {
+        "tailwindcss": "^3.0.23"
+    },
+    "devDependencies": {
+        "release-it": "^14.14.1",
+        "tailwindcss": "^3.0.23"
+    }
+}
