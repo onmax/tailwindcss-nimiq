@@ -1,6 +1,6 @@
 {
     "name": "tailwindcss-nimiq-theme",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Nimiq theme configuration for TailwindCSS",
     "main": "src/index.js",
     "categories": [
