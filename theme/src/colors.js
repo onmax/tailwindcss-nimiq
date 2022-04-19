@@ -12,8 +12,8 @@ module.exports = {
     gold: '#E9B213',
     'dark-gold': '#E5A212',
 
-    'dark-blue': '#1F2348',
-    'darker-dark-blue': '#151833',
+    'space': '#1F2348',
+    'darker-space': '#151833',
 
     'blue': '#0582CA',
     'darker-blue': '#0071C3',
