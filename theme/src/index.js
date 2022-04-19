@@ -123,7 +123,7 @@ module.exports = {
     },
     borderColor: ({ theme }) => ({
         ...theme('colors'),
-        DEFAULT: theme('colors.gray', 'currentColor'),
+        DEFAULT: theme('colors.grey', 'currentColor'),
     }),
     borderRadius: {
         0: '0',

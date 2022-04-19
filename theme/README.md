@@ -1,15 +1,37 @@
 # Nimiq TailwindCSS theme
 
-A custom TailwindCSS config with Nimiq styles.
+A custom TailwindCSS theme with Nimiq styles.
 
-## Theme
+## Installation
 
-1. Install TailwindCSS in your project. See [official docs](https://tailwindcss.com/docs/installation)
-2. Copy and paste [old.tailwind.config.js](./tailwind.config.js) in your own project.
-3. Copy and paste [tailwind.css](./tailwind.css) as well as [.fonts.css](./fonts.css).
-    - You can also download [./fonts](./fonts/) and host the fonts yourself. Remember to update `fonts.css` path.
-    - In tailwind.css, we are using `@import` which is not recommendable at all. Instead you could import with different method. For example, [see this](https://github.com/tailwindlabs/tailwindcss.com/blob/6d6ee63ba619a78955e6e39a46535f80128d839d/src/pages/_app.js#L1).
+> Make sure to install TailwindCSS and create a `tailwind.config.js` file. See [official docs](https://tailwindcss.com/docs/installation)
 
+1. Install the theme
+
+```npm
+npm i -D tailwindcss-nimiq-styles
+```
+
+```yarn
+yarn add -D tailwindcss-nimiq-styles
+```
+
+2. Update your `tailwind.config.js` file:
+
+```js
+module.exports = {
+  theme: {
+    ...require('tailwindcss-nimiq-theme'),
+    
+    // Your custom configuration here
+  },
+  plugins: [
+    // ...
+  ],
+}
+```
+
+Now, you are using the defaults from Nimiq and you can edit the configuration as you would do normally
 
 > Highly recommendable using Tailwind CSS IntelliSense extension in your IDE
 
