@@ -121,9 +121,9 @@ module.exports = {
         'radial-transparent':
             'radial-gradient(100% 100% at 100% 100%, transparent, transparent)',
     },
-    borderColor: ({ theme }) => ({
-        ...theme('colors'),
-        DEFAULT: theme('colors.grey', 'currentColor'),
+    borderColor: () => ({
+        ...colors,
+        DEFAULT: colors.grey,
     }),
     borderRadius: {
         0: '0',
@@ -151,18 +151,17 @@ module.exports = {
             '0px 18px 38px rgba(31, 35, 72, 0.07), 0px 7px 8.5px rgba(31, 35, 72, 0.04), 0px 2px 2.5px rgba(31, 35, 72, 0.02)',
         around:
             '0px 6px 20px rgba(59, 76, 106, 0.13), 0px 1.34018px 4.46726px rgba(59, 76, 106, 0.0774939), 0px 0.399006px 1.33002px rgba(59, 76, 106, 0.0525061)',
-        tw: {
-            // Our default shadows are not great, so we allow tw's defaults
-            // TODO Try to get the defaults from TW automatically
-            sm: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-            DEFAULT: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-            md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-            lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-            xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-            '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
-            inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
-            none: 'none',
-        }
+
+        // Our default shadows are not great, so we allow tw's defaults
+        // TODO Try to get the defaults from TW automatically
+        sm: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+        'tw-default': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+        md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+        lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+        xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+        '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
+        inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+        none: 'none',
     },
     fontFamily: {
         sans: [
@@ -245,9 +244,9 @@ module.exports = {
         9: '2.25rem',
         10: '2.5rem',
     },
-    ringColor: ({ theme }) => ({
-        DEFAULT: theme(hexOpacity(colors['dark-blue'], 75)),
-        ...theme('colors'),
+    ringColor: () => ({
+        DEFAULT: hexOpacity(colors['dark-blue'], 75),
+        ...colors,
     }),
     transitionDuration: {
         DEFAULT: '400ms',
