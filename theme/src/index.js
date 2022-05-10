@@ -1,5 +1,6 @@
 const colors = require('./colors')
 const { rem, hexOpacity } = require('./utils')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     ...colors,
@@ -14,6 +15,9 @@ module.exports = {
     },
     spacing: ({ theme }) => ({
         ...theme.screens,
+        'inherit': 'inherit',
+        'unset': 'unset',
+        'initial': 'initial',
         0: '0px',
         px: '1px',
         0.5: rem(2),
@@ -55,23 +59,11 @@ module.exports = {
         inherit: 'inherit',
         initial: 'initial',
 
-        // TODO Try to get the defaults from TW automatically
-        video: '16 / 9',
+        ...defaultTheme.aspectRatio,
     },
     backgroundImage: {
         // Default Tailwind gradient
-        // TODO Try to get the defaults from TW automatically
-        none: 'none',
-        'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
-        'gradient-to-tr': 'linear-gradient(to top right, var(--tw-gradient-stops))',
-        'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
-        'gradient-to-br': 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
-        'gradient-to-b': 'linear-gradient(to bottom, var(--tw-gradient-stops))',
-        'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
-        'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
-        'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
-
-        'radial-gradient': 'radial-gradient(var(--tw-gradient-stops))',
+        ...defaultTheme.backgroundImage,
 
         // Radial gradient backgrounds based on the previously defined theme colors
         'radial-white':
@@ -139,50 +131,24 @@ module.exports = {
         16: rem(16),
     },
     boxShadow: {
+        // Our default shadows are not great, so we allow tw's defaults
+        ...defaultTheme.boxShadow,
+        'tw-default': defaultTheme.boxShadow.DEFAULT,
+
         DEFAULT:
             '0px 18px 38px rgba(31, 35, 72, 0.07), 0px 7px 8.5px rgba(31, 35, 72, 0.04), 0px 2px 2.5px rgba(31, 35, 72, 0.02)',
         around:
             '0px 6px 20px rgba(59, 76, 106, 0.13), 0px 1.34018px 4.46726px rgba(59, 76, 106, 0.0774939), 0px 0.399006px 1.33002px rgba(59, 76, 106, 0.0525061)',
 
-        // Our default shadows are not great, so we allow tw's defaults
-        // TODO Try to get the defaults from TW automatically
-        sm: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-        'tw-default': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-        md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-        lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-        xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-        '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
-        inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
-        none: 'none',
     },
     fontFamily: {
         sans: [
             'Mulish',
-            'ui-sans-serif',
-            'system-ui',
-            '-apple-system',
-            'BlinkMacSystemFont',
-            '"Segoe UI"',
-            'Roboto',
-            '"Helvetica Neue"',
-            'Arial',
-            '"Noto Sans"',
-            'sans-serif',
-            '"Apple Color Emoji"',
-            '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
-            '"Noto Color Emoji"'
+            ...defaultTheme.fontFamily.sans,
         ],
         mono: [
             'Fira Code',
-            'ui-monospace',
-            'SFMono-Regular',
-            'Menlo',
-            'Monaco',
-            'Consolas',
-            '"Liberation Mono"',
-            '"Courier New"',
-            'monospace'
+            ...defaultTheme.fontFamily.mono,
         ],
     },
     fontSize: {
@@ -257,38 +223,18 @@ module.exports = {
         height: 'height',
         'transform-width': 'transform, width',
         'border-radius': 'border-radius',
-
-        // TODO Try to get the defaults from TW automatically
-        none: 'none',
-        all: 'all',
-        DEFAULT:
-            'color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter',
-        colors: 'color, background-color, border-color, text-decoration-color, fill, stroke',
-        opacity: 'opacity',
-        shadow: 'box-shadow',
-        transform: 'transform',
+        ...defaultTheme.transitionProperty,
     },
 
     transitionTimingFunction: {
         DEFAULT: 'cubic-bezier(0.25, 0, 0, 1)',
-
-        // TODO Try to get the defaults from TW automatically
-        linear: 'linear',
-        in: 'cubic-bezier(0.4, 0, 1, 1)',
-        out: 'cubic-bezier(0, 0, 0.2, 1)',
-        'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        ...defaultTheme.transitionTimingFunction,
     },
 
     zIndex: {
-        1: 1,
+        // generate JSON object such as { 1: 1, 2: 2 ...} to 9
+        ...Array.from({ length: 9 }, (_, k) => k + 1).reduce((acc, val) => ({ ...acc, [val]: val }), {}),
 
-        // TODO Try to get the defaults from TW automatically
-        auto: 'auto',
-        0: '0',
-        10: '10',
-        20: '20',
-        30: '30',
-        40: '40',
-        50: '50',
+        ...defaultTheme.zIndex,
     },
 };
