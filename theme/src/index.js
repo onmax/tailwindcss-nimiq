@@ -3,7 +3,7 @@ const { rem, hexOpacity } = require('./utils')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-    ...colors,
+    colors,
     screens: {
         '2xs': '360px',
         xs: '420px',
