@@ -9,11 +9,11 @@ A custom TailwindCSS theme with Nimiq styles.
 1. Install the theme
 
 ```npm
-npm i -D tailwindcss-nimiq-styles
+npm i -D tailwindcss-nimiq-theme
 ```
 
 ```yarn
-yarn add -D tailwindcss-nimiq-styles
+yarn add -D tailwindcss-nimiq-theme
 ```
 
 2. Update your `tailwind.config.js` file:
