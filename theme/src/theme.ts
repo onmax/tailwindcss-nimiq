@@ -1,20 +1,15 @@
-const colors = require('./colors')
-const { rem, hexOpacity } = require('./utils')
-const defaultTheme = require('tailwindcss/defaultTheme')
+import defaultTheme from 'tailwindcss/defaultTheme'
+import type { ThemeConfig } from 'tailwindcss/types/config';
+import { colors } from './colors'
+import { screens } from './screens'
+import { backgroundImage } from './bg-gradients'
+import { rem, hexOpacity } from './util'
 
-module.exports = {
+export const theme: Partial<ThemeConfig> = {
     colors,
-    screens: {
-        '2xs': '360px',
-        xs: '420px',
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1152px',
-        '2xl': '1440px',
-    },
-    spacing: ({ theme }) => ({
-        ...theme.screens,
+    screens,
+    spacing: () => ({
+        ...screens,
         'inherit': 'inherit',
         'unset': 'unset',
         'initial': 'initial',
@@ -55,80 +50,33 @@ module.exports = {
         96: rem(384),
     }),
     aspectRatio: {
-        auto: 'auto',
         inherit: 'inherit',
         initial: 'initial',
 
         ...defaultTheme.aspectRatio,
     },
-    backgroundImage: {
-        // Default Tailwind gradient
-        ...defaultTheme.backgroundImage,
-
-        // Radial gradient backgrounds based on the previously defined theme colors
-        'radial-white':
-            'radial-gradient(100% 100% at 100% 100%, theme(colors.grey.light), theme(colors.white.DEFAULT))',
-        'radial-grey':
-            'radial-gradient(100% 100% at 100% 100%, #EAE9EA, theme(colors.grey.DEFAULT))',
-        'radial-gold':
-            'radial-gradient(100% 100% at 100% 100%, #EC991C, theme(colors.gold.DEFAULT))',
-        'radial-gold-darkened':
-            'radial-gradient(100% 100% at 100% 100%, #E58A1B, theme(colors.gold.darkened))',
-        'radial-blue-dark':
-            'radial-gradient(100% 100% at 100% 100%, #260133, theme(colors.blue.dark))',
-        'radial-blue-dark-darkened':
-            'radial-gradient(100% 100% at 100% 100%, #180021, theme(colors.blue.dark-darkened))',
-        'radial-blue-light':
-            'radial-gradient(100% 100% at 100% 100%, #265DD7, theme(colors.blue.light))',
-        'radial-blue-light-darkened':
-            'radial-gradient(100% 100% at 100% 100%, #2355C4, theme(colors.blue.light-darkened))',
-        'radial-green':
-            'radial-gradient(100% 100% at 100% 100%, #41A38E, theme(colors.green.DEFAULT))',
-        'radial-green-darkened':
-            'radial-gradient(100% 100% at 100% 100%, #3D9988, theme(colors.green.darkened))',
-        'radial-orange':
-            'radial-gradient(100% 100% at 100% 100%, #FD6216, theme(colors.orange.DEFAULT))',
-        'radial-orange-darkened':
-            'radial-gradient(100% 100% at 100% 100%, #EA5200, theme(colors.orange.darkened))',
-        'radial-red':
-            'radial-gradient(100% 100% at 100% 100%, #CC3047, theme(colors.red.DEFAULT))',
-        'radial-red-darkened':
-            'radial-gradient(100% 100% at 100% 100%, #BF2D46, theme(colors.red.darkened))',
-        'radial-brown':
-            'radial-gradient(100% 100% at 100% 100%, #724147, theme(colors.brown.DEFAULT))',
-        'radial-purple':
-            'radial-gradient(100% 100% at 100% 100%, #4D4C96, theme(colors.purple.DEFAULT))',
-        'radial-pink':
-            'radial-gradient(100% 100% at 100% 100%, #E0516B, theme(colors.pink.DEFAULT))',
-        'radial-lime':
-            'radial-gradient(100% 100% at 100% 100%, #70B069, theme(colors.lime.DEFAULT))',
-        'radial-transparent':
-            'radial-gradient(100% 100% at 100% 100%, transparent, transparent)',
-    },
+    backgroundImage,
     borderColor: () => ({
         ...colors,
-        DEFAULT: colors.grey,
+        DEFAULT: colors.fog,
     }),
     borderRadius: {
         0: '0',
-        2: rem(2),
-        4: rem(4),
-        6: rem(6),
-        8: rem(8),
-        12: rem(12),
-        16: rem(16),
+        xs: rem(2),
+        sm: rem(4),
+        md: rem(6),
+        lg: rem(8),
+        xl: rem(12),
         full: '9999px',
     },
     borderWidth: {
         0: '0',
         DEFAULT: rem(1),
-        1.5: rem(1.5),
-        2: rem(2),
-        4: rem(4),
-        6: rem(6),
-        8: rem(8),
-        12: rem(12),
-        16: rem(16),
+        xs: rem(1.5),
+        sm: rem(2),
+        md: rem(4),
+        lg: rem(6),
+        xl: rem(8),
     },
     boxShadow: {
         // Our default shadows are not great, so we allow tw's defaults
@@ -203,7 +151,7 @@ module.exports = {
         10: '2.5rem',
     },
     ringColor: () => ({
-        DEFAULT: hexOpacity(colors['dark-blue'], 75),
+        DEFAULT: hexOpacity(colors.space.DEFAULT, 75),
         ...colors,
     }),
     transitionDuration: {
@@ -227,14 +175,7 @@ module.exports = {
     },
 
     transitionTimingFunction: {
-        DEFAULT: 'cubic-bezier(0.25, 0, 0, 1)',
         ...defaultTheme.transitionTimingFunction,
-    },
-
-    zIndex: {
-        // generate JSON object such as { 1: 1, 2: 2 ...} to 9
-        ...Array.from({ length: 9 }, (_, k) => k + 1).reduce((acc, val) => ({ ...acc, [val]: val }), {}),
-
-        ...defaultTheme.zIndex,
+        DEFAULT: 'cubic-bezier(0.25, 0, 0, 1)',
     },
 };
