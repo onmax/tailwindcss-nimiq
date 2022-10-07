@@ -114,12 +114,12 @@ Tailwind Nimiq includes a gradient palette that we use to create Nimiq Apps.
                 <thead>
                     <tr>
                         <th class="sticky z-10 top-0 text-sm leading-6 font-semibold p-0">
-                            <div class="py-2 pr-2 border-b">
+                            <div class="py-2 pr-2">
                                 Class
                             </div>
                         </th>
                         <th class="sticky z-10 top-0 text-sm leading-6 font-semibold p-0">
-                            <div class="py-2 pl-2 border-b">
+                            <div class="py-2 pl-2">
                                 Properties
                             </div>
                         </th>
