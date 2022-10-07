@@ -14,8 +14,9 @@ jobs:
         with:
           node-version: 16
           cache: yarn
-          working-directory: docs
+          cache-dependency-path: docs/yarn.lock
       - run: yarn install --frozen-lockfile
+
       - name: Build
         run: yarn docs:build
 
