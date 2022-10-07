@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { theme } from '../../theme/src/theme.ts'
-import { opacitiesValues } from '../../theme/src/colors.ts'
+import { theme } from '../../theme/dist/theme.js'
+import { opacitiesValues } from '../../theme/dist/colors.js'
 import defaultConfig from 'tailwindcss/defaultConfig'
 
 const { colors, backgroundImage: bgGradients, spacing, borderRadius } = theme
