@@ -1,5 +1,5 @@
 export default {
     title: 'TailwindCSS Nimiq',
     description: 'A custom Tailwind CSS config with Nimiq styles.',
-    base: '/tailwindcss-nimiq/'
+    base: process.env.NODE_ENV === 'production' ? '/tailwindcss-nimiq/' : '/',
 }

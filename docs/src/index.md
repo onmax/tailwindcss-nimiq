@@ -66,12 +66,12 @@ For each color, we add different opacities values, to create lighter variants of
     <div class="flex flex-col md:flex-row" v-for="({name, primary, colors }) in colorsWithVariants">
         <div class="w-16 shrink-0 flex flex-col">
             <div class="flex flex-col justify-center">
-                <h4 class="text-sm font-semibold text-slate-900 dark:text-slate-200 capitalize">
+                <h4 class="text-sm font-semibold capitalize">
                     {{ name }}
                 </h4>
             </div>
             <div v-if="primary" class="h-10 flex-1 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10" :style="`background-color: ${primary}`"></div>
-            <div class="text-sm font-mono text-slate-500 dark:text-slate-400">
+            <div class="text-sm font-mono opacity-60">
                 {{ primary }}
             </div>
         </div>
@@ -79,10 +79,10 @@ For each color, we add different opacities values, to create lighter variants of
             <li v-for="({color, name}, i) in colors" class="flex flex-col gap-1.5 cursor-pointer !mt-0">
                 <div class="h-10 w-full rounded dark:ring-1 dark:ring-inset dark:ring-white/10" :style="`background-color: ${color}`"></div>
                 <div class="px-0.5 flex md:justify-between md:space-x-2 items-start" :class="{'flex-col': !primary }">
-                    <div class="text-sm font-medium text-slate-900 2xl:w-full dark:text-white lowercase">
+                    <div class="text-sm font-medium 2xl:w-full dark:text-white lowercase">
                         {{ name }}
                     </div>
-                    <div class="text-slate-500 text-sm font-mono lowercase dark:text-slate-400 !ml-0">
+                    <div class="text-sm font-mono opacity-60 lowercase !ml-0">
                         {{  primary ? `${opacitiesValues[i]}%` : color }}
                     </div>
                 </div>
@@ -99,7 +99,7 @@ Tailwind Nimiq includes a gradient palette that we use to create Nimiq Apps.
     <li v-for="([name, gradient]) in nimiqGradients" class="flex-1 !mt-0">
         <div class="h-24 w-24 mx-auto rounded-lg dark:ring-1 dark:ring-inset dark:ring-white/10" :style="`background: ${gradient}`"></div>
         <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block text-center">
-            <div class="text-sm font-mono text-slate-500 2xl:w-full dark:text-slate-400 lowercase h-6 whitespace-nowrap mx-auto">
+            <div class="text-sm font-mono opacity-60 2xl:w-full lowercase h-6 whitespace-nowrap mx-auto">
                 bg-{{ name }}
             </div>
         </div>
@@ -113,13 +113,13 @@ Tailwind Nimiq includes a gradient palette that we use to create Nimiq Apps.
             <table class="text-left border-collapse">
                 <thead>
                     <tr>
-                        <th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300">
-                            <div class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20">
+                        <th class="sticky z-10 top-0 text-sm leading-6 font-semibold p-0">
+                            <div class="py-2 pr-2 border-b">
                                 Class
                             </div>
                         </th>
-                        <th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300">
-                            <div class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20">
+                        <th class="sticky z-10 top-0 text-sm leading-6 font-semibold p-0">
+                            <div class="py-2 pl-2 border-b">
                                 Properties
                             </div>
                         </th>
@@ -144,13 +144,13 @@ Tailwind Nimiq includes a gradient palette that we use to create Nimiq Apps.
             <table class="text-left border-collapse">
                 <thead>
                     <tr>
-                        <th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300">
-                            <div class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20">
+                        <th class="sticky z-10 top-0 text-sm leading-6 font-semibold p-0">
+                            <div class="py-2 pr-2">
                                 Class
                             </div>
                         </th>
-                        <th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300">
-                            <div class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20">
+                        <th class="sticky z-10 top-0 text-sm leading-6 font-semibold p-0">
+                            <div class="py-2 pl-2">
                                 Properties
                             </div>
                         </th>
