@@ -14,14 +14,22 @@
     "vue": "^3.2.40"
   },
   "scripts": {
-    "docs:dev": "vitepress dev src",
-    "docs:build": "vitepress build src",
-    "docs:serve": "vitepress serve src"
+    "docs:dev": "vitepress dev docs/src",
+    "docs:build": "vitepress build docs/src",
+    "docs:serve": "vitepress serve docs/src"
   },
   "postcss": {
-		"plugins": {
-			"tailwindcss": {},
-			"autoprefixer": {}
-		}
-	}
+    "plugins": {
+      "tailwindcss": {
+        "content": [
+                "./docs/src/**/*.md"
+              ],
+        "theme": {
+          "extend": {}
+        },
+        "plugins": []
+      },
+      "autoprefixer": {}
+    }
+  }
 }

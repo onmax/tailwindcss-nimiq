@@ -14,11 +14,10 @@ jobs:
         with:
           node-version: 16
           cache: yarn
-          cache-dependency-path: docs/yarn.lock
       - run: yarn install --frozen-lockfile
 
       - name: Build
-        run: yarn docs:build --base /docs
+        run: yarn docs:build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
