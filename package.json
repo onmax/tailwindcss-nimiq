@@ -1,8 +1,7 @@
 {
   "name": "nimiq-tailwindcss",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A custom Tailwind CSS config with Nimiq styles",
-  "main": "index.js",
   "repository": "https://github.com/onmax/tailwindcss-nimiq",
   "author": "onmax",
   "license": "MIT",
@@ -10,6 +9,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
@@ -44,6 +44,6 @@
     }
   },
   "dependencies": {
-    "nimiq-tailwindcss": "^1.0.4"
+    "nimiq-tailwindcss": "^1.0.5"
   }
 }
