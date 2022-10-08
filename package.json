@@ -1,6 +1,6 @@
 {
   "name": "nimiq-tailwindcss",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "A custom Tailwind CSS config with Nimiq styles",
   "main": "index.js",
   "repository": "https://github.com/onmax/tailwindcss-nimiq",
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "theme:build": "tsc",
-    "release": "bumpp --all",
+    "release": "bumpp --all && npm publish --access public",
     "docs:dev": "vitepress dev docs/src",
     "docs:build": "vitepress build docs/src",
     "docs:serve": "vitepress serve docs/src"
