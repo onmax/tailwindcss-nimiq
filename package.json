@@ -1,6 +1,6 @@
 {
   "name": "nimiq-tailwindcss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A custom Tailwind CSS config with Nimiq styles",
   "main": "index.js",
   "repository": "https://github.com/onmax/tailwindcss-nimiq",
