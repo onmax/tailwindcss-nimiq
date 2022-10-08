@@ -41,6 +41,6 @@
     }
   },
   "dependencies": {
-    "nimiq-tailwindcss": "^1.0.1"
+    "nimiq-tailwindcss": "^1.0.2"
   }
 }

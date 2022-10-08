@@ -809,6 +809,13 @@ nimiq-tailwindcss@^1.0.1:
   resolved "https://registry.yarnpkg.com/nimiq-tailwindcss/-/nimiq-tailwindcss-1.0.1.tgz#079b1fdccc8645c1ea2238c36b53153ee52d0791"
   integrity sha512-qGyJCjilPhRDHeLtJZLi0ByaPlK9mjd4zp1AbO9okw14hVybkpBONDiozXJYXzsiBKPrNxSRdJMkA0NRBAMcOw==
 
+nimiq-tailwindcss@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/nimiq-tailwindcss/-/nimiq-tailwindcss-1.0.2.tgz#5238c129dd125535a0312595f30f106bdc03be99"
+  integrity sha512-+QXtP9BtRMB16jcTbEeGb8r0ZrkQpDG+whjEKCt3bFOoJ+SvKaWylYHmK6cIa+zaCTjZ6NikXZ7KtIy2HmP81g==
+  dependencies:
+    nimiq-tailwindcss "^1.0.1"
+
 node-releases@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.6.tgz#8a7088c63a55e493845683ebf3c828d8c51c5503"
