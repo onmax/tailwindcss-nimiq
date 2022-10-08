@@ -1,6 +1,6 @@
 {
   "name": "nimiq-tailwindcss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom Tailwind CSS config with Nimiq styles",
   "main": "index.js",
   "repository": "https://github.com/onmax/tailwindcss-nimiq",
@@ -30,8 +30,8 @@
     "plugins": {
       "tailwindcss": {
         "content": [
-                "./docs/src/**/*.md"
-              ],
+          "./docs/src/**/*.md"
+        ],
         "theme": {
           "extend": {}
         },
