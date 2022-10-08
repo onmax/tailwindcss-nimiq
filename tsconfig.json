@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es2017",
-        "module": "esnext",
+        "module": "CommonJS",
         "lib": [
             "ESNext",
             "DOM",
@@ -15,8 +15,8 @@
         "strictFunctionTypes": true,
         "declaration": true,
         "resolveJsonModule": true,
-        "rootDir": "./src",
-        "baseUrl": "./src",
+        "rootDir": "./theme/src",
+        "baseUrl": "./theme/src",
         "jsx": "preserve",
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
