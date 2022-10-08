@@ -816,6 +816,13 @@ nimiq-tailwindcss@^1.0.2:
   dependencies:
     nimiq-tailwindcss "^1.0.1"
 
+nimiq-tailwindcss@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/nimiq-tailwindcss/-/nimiq-tailwindcss-1.0.4.tgz#baf720511559192b9c673169397ab84ee08358cb"
+  integrity sha512-Y/epRZ6oxn3YmRatQiJVNB3MV9CaUwBhXHk/2uZvtAjrA9vPbiI6js4wuHIt5RXR1cdXJJnLWEu8l/sOpzFlog==
+  dependencies:
+    nimiq-tailwindcss "^1.0.2"
+
 node-releases@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.6.tgz#8a7088c63a55e493845683ebf3c828d8c51c5503"
