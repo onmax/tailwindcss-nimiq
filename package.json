@@ -1,6 +1,6 @@
 {
   "name": "nimiq-tailwindcss",
-  "version": "1.0.8",
+  "version": "0.0.1",
   "description": "A custom Tailwind CSS config with Nimiq styles",
   "repository": "https://github.com/onmax/tailwindcss-nimiq",
   "author": "onmax",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "theme:build": "tsc",
-    "release": "npm run theme:build && bumpp --all && npm publish --access public",
+    "release": "yarn theme:build && bumpp --all && npm publish --access public",
     "docs:dev": "vitepress dev docs/src",
     "docs:build": "vitepress build docs/src",
     "docs:serve": "vitepress serve docs/src"

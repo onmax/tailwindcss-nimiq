@@ -1,3 +1,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-accent: #E9B213;
+    --vp-c-brand: #1F2348;
+    --vp-c-text-code: #F1F1F1;
+    --vp-code-block-bg: rgba(31, 35, 72, 0.06);
+    --vp-c-disabled-bg: rgba(31, 35, 72, 0.15);
+    /* fix contrast on gray cards: used by --vp-c-text-2 */
+    --vp-c-text-light-2: rgba(56 56 56 / 70%);
+}
+
+.dark {
+    --vp-c-brand: #2C72C7;
+    --vp-button-brand-hover-text: #0582CA;
+    --vp-code-block-bg: rgba(0, 0, 0, 0.2);
+    --vp-c-text-code: #F1F1F1;
+    /* fix contrast on gray cards: check the same above (this is the default) */
+    --vp-c-text-dark-2: rgba(235, 235, 235, 0.60);
+}
+
+/**
+ * Component: Code
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-code-line-highlight-color: rgba(125, 125, 125, 0.2);
+}
+
+.dark {
+    --vp-code-line-highlight-color: rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-button-brand-border: #1F2348;
+    --vp-button-brand-text: #F1F1F1;
+    --vp-button-brand-bg: #1F2348;
+    --vp-button-brand-hover-border: #1F2348;
+    --vp-button-brand-hover-text: #F1F1F1;
+    --vp-button-brand-hover-bg: #1F2348;
+    --vp-button-brand-active-border: #1F2348;
+    --vp-button-brand-active-text: #F1F1F1;
+    --vp-button-brand-active-bg: #0582CA;
+}
+
+.dark {
+    --vp-button-brand-border: #2C72C7;
+    --vp-button-brand-text: #F8F8F8;
+    --vp-button-brand-bg: #2C72C7;
+    --vp-button-brand-hover-border: #2C72C7;
+    --vp-button-brand-hover-text: #F8F8F8;
+    --vp-button-brand-hover-bg: #2C72C7;
+    --vp-button-brand-active-border: #2C72C7;
+    --vp-button-brand-active-text: #F8F8F8;
+    --vp-button-brand-active-bg: #0582CA;
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(30deg, #E9B213 60%, #E5A212 100%);
+    --vp-home-hero-image-background-image: linear-gradient(30deg, #E9B213 60%, #E5A212 100%);
+    --vp-home-hero-image-filter: blur(30px);
+}
+
+@media (min-width: 640px) {
+    :root {
+        --vp-home-hero-image-filter: blur(56px);
+    }
+}
+
+@media (min-width: 960px) {
+    :root {
+        --vp-home-hero-image-filter: blur(72px);
+    }
+}

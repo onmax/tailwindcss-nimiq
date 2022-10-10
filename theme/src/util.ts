@@ -7,7 +7,7 @@ export function hexOpacity(color: string, alpha: number) {
     return `${color}${normalized.toString(16).padStart(2, '0')}`
 }
 
-export function round(num: number) {
+export function round(num: number) {    
     return num
         .toFixed(7)
         .replace(/(\.[0-9]+?)0+$/, '$1')
