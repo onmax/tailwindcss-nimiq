@@ -1,5 +1,5 @@
-import { theme } from '../../theme/src/theme'
-import { opacitiesValues as opacitiesValues_ } from '../../theme/src/colors'
+import { theme } from '../../../../theme/src/theme'
+import { opacitiesValues as opacitiesValues_ } from '../../../../theme/src/colors'
 
 export const opacitiesValues = opacitiesValues_;
 export const { colors, backgroundImage: bgGradients, spacing, borderRadius } = theme

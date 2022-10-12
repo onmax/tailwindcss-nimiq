@@ -2,21 +2,27 @@
 category: Theme
 ---
 
-<script setup lang="ts">
-import { getColors } from '../util.ts'
-</script>
-
-## Background gradients
+# Background gradients
 
 Tailwind Nimiq includes a gradient palette that we use to create Nimiq Apps.
 
-<ul class="!my-0 !px-0 !list-none grid grid-cols-4 gap-8">
-    <li v-for="([name, gradient]) in getColors().nimiqGradients" class="flex-1 !mt-0">
-        <div class="h-24 w-24 mx-auto rounded-lg dark:ring-1 dark:ring-inset dark:ring-white/10" :style="`background: ${gradient}`"></div>
-        <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block text-center">
-            <div class="text-sm font-mono opacity-60 2xl:w-full lowercase h-6 whitespace-nowrap mx-auto">
-                bg-{{ name }}
-            </div>
-        </div>
-    </li>
-</ul>
+
+<script setup lang="ts">
+import BgGradients from './components/BgGradients.vue'
+</script>
+
+<BgGradients />
+
+## Changing the gradient
+
+These styles are based on Tailwind's [gradient system](https://tailwindcss.com/docs/background-image#gradient-color-stops) where you can use the `from-` and `to-` prefixes to control the direction of the gradient.
+
+For example, you can use any of the gradients from Nimiq, but you can change one of the colors to create a new gradient.
+
+```html
+<div class="bg-gradient-space from-honey"></div>
+```
+
+## Learn more
+
+You can learn more about Nimiq's Style Guide in the [Nimiq Style Guide](https://nimiq.github.io/nimiq-style/) website.

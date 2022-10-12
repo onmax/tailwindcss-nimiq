@@ -36,7 +36,7 @@
     "plugins": {
       "tailwindcss": {
         "content": [
-          "./docs/src/**/*.md"
+          "./docs/src/theme/components/*.vue"
         ],
         "theme": {
           "extend": {}

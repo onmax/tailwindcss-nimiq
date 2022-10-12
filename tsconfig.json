@@ -25,5 +25,14 @@
     "exclude": [
         "node_modules",
         "**/dist",
-    ]
+    ],
+    "include": [
+        "./theme/src/**/*",
+        "./docs/src/theme/**/*",
+    ],
+    "paths": {
+        "@/*": [
+            "/"
+        ]
+    }
 }

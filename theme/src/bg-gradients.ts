@@ -2,7 +2,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 import { colors } from './colors'
 import type { ThemeConfig } from 'tailwindcss/types/config';
 
-const gradient = (from: string, to: string) => `linear-gradient(to bottom right, var(--tw-gradient-from, ${from}), var(--tw-gradient-to, ${to}))`
+const gradient = (from: string, to: string) => `radial-gradient(100% 100% at 100% 100%, var(--tw-gradient-from, ${from}), var(--tw-gradient-to, ${to}))`
 
 export const backgroundImage: ThemeConfig["backgroundImage"] = {
     // Default Tailwind gradient

@@ -9,8 +9,6 @@
 :root {
     --vp-c-accent: #E9B213;
     --vp-c-brand: #1F2348;
-    --vp-c-text-code: #F1F1F1;
-    --vp-code-block-bg: rgba(31, 35, 72, 0.06);
     --vp-c-disabled-bg: rgba(31, 35, 72, 0.15);
     /* fix contrast on gray cards: used by --vp-c-text-2 */
     --vp-c-text-light-2: rgba(56 56 56 / 70%);
@@ -19,8 +17,6 @@
 .dark {
     --vp-c-brand: #2C72C7;
     --vp-button-brand-hover-text: #0582CA;
-    --vp-code-block-bg: rgba(0, 0, 0, 0.2);
-    --vp-c-text-code: #F1F1F1;
     /* fix contrast on gray cards: check the same above (this is the default) */
     --vp-c-text-dark-2: rgba(235, 235, 235, 0.60);
 }
