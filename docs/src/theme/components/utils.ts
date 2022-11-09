@@ -2,7 +2,7 @@ import { theme } from '../../../../theme/src/theme'
 import { opacitiesValues as opacitiesValues_ } from '../../../../theme/src/colors'
 
 export const opacitiesValues = opacitiesValues_;
-export const { colors, backgroundImage: bgGradients, spacing, borderRadius } = theme
+export const { colors, backgroundImage: bgGradients, spacing, borderRadius, boxShadow } = theme
 
 const extractNumber = (name: string) => name.match(/\d+/)?.[0] || ''
 

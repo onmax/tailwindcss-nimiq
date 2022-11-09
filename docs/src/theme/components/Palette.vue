@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getColors, opacitiesValues } from './utils.ts'
+import { getColors, opacitiesValues } from './utils'
 
 const { colorsWithVariants } = getColors()
 </script>

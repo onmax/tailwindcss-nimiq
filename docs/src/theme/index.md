@@ -9,9 +9,9 @@
 ## Positioning
 - [Spacing](./spacing)
 
-## Borders
+## Boxes
 - [Border Radius](./border-radius)
+- [Shadows](./box-shadow)
 
-## TODO
-- Typography / Font
-- Shadows
+<!-- ## TODO
+- Typography / Font -->
