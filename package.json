@@ -45,8 +45,5 @@
       },
       "autoprefixer": {}
     }
-  },
-  "dependencies": {
-    "nimiq-tailwindcss": "^1.0.5"
   }
 }
