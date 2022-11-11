@@ -2,7 +2,7 @@
     "name": "tailwindcss-nimiq-theme",
     "version": "0.1.0",
     "description": "Nimiq theme configuration for TailwindCSS",
-    "main": "src/index.js",
+    "main": "dist/index.js",
     "categories": [
         "Tailwind CSS",
         "Tailwind CSS Theme",
