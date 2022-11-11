@@ -19,9 +19,11 @@
         "release": "yarn build && release-it",
         "build": "tsc"
     },
+    "peerDependencies": {
+        "tailwindcss": "^3.1.8"
+    },
     "devDependencies": {
         "release-it": "^14.14.1",
-        "tailwindcss": "^3.1.8",
         "typescript": "^4.8.4"
     }
 }
